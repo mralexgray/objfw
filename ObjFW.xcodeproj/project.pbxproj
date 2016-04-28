@@ -992,6 +992,16 @@
 		4BFBDD1610A0724800051AFB /* unicode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = unicode.m; path = src/unicode.m; sourceTree = "<group>"; };
 		4BFF3710177E17C100192782 /* OFRemoveItemFailedException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OFRemoveItemFailedException.h; path = src/exceptions/OFRemoveItemFailedException.h; sourceTree = "<group>"; };
 		4BFF3711177E17C100192782 /* OFRemoveItemFailedException.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OFRemoveItemFailedException.m; path = src/exceptions/OFRemoveItemFailedException.m; sourceTree = "<group>"; };
+		7B9BB3EC1CCA51C00000ED52 /* extra.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = extra.mk; sourceTree = "<group>"; };
+		7B9BB3ED1CCA51C00000ED52 /* buildsys.mk */ = {isa = PBXFileReference; lastKnownFileType = text; path = buildsys.mk; sourceTree = "<group>"; };
+		7B9BB3EE1CCA51C00000ED52 /* configure */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = configure; sourceTree = "<group>"; };
+		7B9BB3EF1CCA51C00000ED52 /* buildsys.mk.in */ = {isa = PBXFileReference; lastKnownFileType = text; path = buildsys.mk.in; sourceTree = "<group>"; };
+		7B9BB3F01CCA51C00000ED52 /* ChangeLog */ = {isa = PBXFileReference; lastKnownFileType = text; path = ChangeLog; sourceTree = "<group>"; };
+		7B9BB3F11CCA51C00000ED52 /* Doxyfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Doxyfile; sourceTree = "<group>"; };
+		7B9BB3F21CCA51C00000ED52 /* Makefile */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
+		7B9BB3F31CCA51C00000ED52 /* PLATFORMS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = PLATFORMS.md; sourceTree = "<group>"; };
+		7B9BB3F41CCA51C00000ED52 /* README-WINDOWS.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README-WINDOWS.md"; sourceTree = "<group>"; };
+		7B9BB3F51CCA51C00000ED52 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1033,6 +1043,7 @@
 		08FB7794FE84155DC02AAC07 /* ObjFW */ = {
 			isa = PBXGroup;
 			children = (
+				7B9BB3F61CCA51C90000ED52 /* Etc */,
 				4B6EF66C123535340076B512 /* ObjFW */,
 				4B6EF66D123535480076B512 /* Tests */,
 				4BF33B1A13380A800059CEF7 /* Frameworks */,
@@ -1597,6 +1608,23 @@
 				4BF33B4313380CD40059CEF7 /* testfile.txt */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7B9BB3F61CCA51C90000ED52 /* Etc */ = {
+			isa = PBXGroup;
+			children = (
+				7B9BB3EC1CCA51C00000ED52 /* extra.mk */,
+				7B9BB3ED1CCA51C00000ED52 /* buildsys.mk */,
+				7B9BB3EE1CCA51C00000ED52 /* configure */,
+				7B9BB3EF1CCA51C00000ED52 /* buildsys.mk.in */,
+				7B9BB3F01CCA51C00000ED52 /* ChangeLog */,
+				7B9BB3F11CCA51C00000ED52 /* Doxyfile */,
+				7B9BB3F21CCA51C00000ED52 /* Makefile */,
+				7B9BB3F31CCA51C00000ED52 /* PLATFORMS.md */,
+				7B9BB3F41CCA51C00000ED52 /* README-WINDOWS.md */,
+				7B9BB3F51CCA51C00000ED52 /* README.md */,
+			);
+			name = Etc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -2401,6 +2429,11 @@
 		4B3D23871337FBC800DD29B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEFINES_MODULE = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
 				DYLIB_COMPATIBILITY_VERSION = 8;
 				DYLIB_CURRENT_VERSION = 8;
 				FRAMEWORK_VERSION = A;
@@ -2419,6 +2452,11 @@
 		4B3D23881337FBC800DD29B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
+				DEFINES_MODULE = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DEPLOYMENT_POSTPROCESSING = YES;
+				DSTROOT = "$(HOME)";
 				DYLIB_COMPATIBILITY_VERSION = 8;
 				DYLIB_CURRENT_VERSION = 8;
 				FRAMEWORK_VERSION = A;
